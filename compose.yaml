@@ -8,7 +8,6 @@ services:
       - "127.0.0.1:${ORDER_TRACKER_PORT:-8000}:8000"
     environment:
       ORDER_DB_PATH: /data/orders.db
-      RELEASE_SHA: ${RELEASE_SHA:-dev}
     volumes:
       - orders:/data
     restart: unless-stopped

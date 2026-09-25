@@ -91,11 +91,6 @@ def health():
     return {"status": "ok"}
 
 
-@app.get("/version")
-def version():
-    return {"release": os.getenv("RELEASE_SHA", "dev")}
-
-
 @app.get("/api/orders")
 def list_orders():
     with connect() as db:
